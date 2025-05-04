@@ -20,5 +20,5 @@ async googleAuthRedirect(@Req() req: Request, @Res() res: Response) {
   const token = this.authService.generateToken(user);
   console.log("Generated token:", token);
 
-  res.redirect(`http://localhost:5173/dashboard?token=${token}`);
+  res.redirect(`https://survey-frontend-delta.vercel.app/dashboard?token=${token}`);
 }}
