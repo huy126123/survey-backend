@@ -17,6 +17,8 @@ export class AuthController {
 async googleAuthRedirect(@Req() req: Request, @Res() res: Response) {
   console.log("Google callback hit");
   const user = req.user;
+  console.log('User from Google:', req.user);
+
   const token = this.authService.generateToken(user);
   console.log("Generated token:", token);
 
